@@ -1,0 +1,11 @@
+#!/bin/sh
+# This script creates a new tmux session with a small split window on the
+# bottom. Used mostly for webdev to see server output.
+
+tmux new-session -s yuh \; \
+	new-window \; \
+	select-window -t 1 \; \
+    rename-window Main \; \
+	select-window -t 2 \; \
+	rename-window Code \; \
+	split-window -v -p 20 \;

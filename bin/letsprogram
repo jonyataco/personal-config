@@ -1,0 +1,11 @@
+#!/bin/sh
+# Script that creates an enviroment with two windows
+# Ideally used to have one window edit code and the other to compile
+
+tmux new-session -s yuh \; \
+    new-window \; \
+	select-window -t 1 \; \
+    rename-window Code \; \
+    select-window -t 2 \; \
+    rename-window Build \; \
+	select-window -t 1 \;

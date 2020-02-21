@@ -1,0 +1,3 @@
+#!/bin/sh
+# Script that is used to open a file using quicklook 
+qlmanage -p "$@" >& /dev/null &
